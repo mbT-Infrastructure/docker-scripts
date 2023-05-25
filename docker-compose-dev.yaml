@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+
+    docker-scripts:
+        container_name: docker-scripts
+        build: .
+        volumes:
+            - "./data-local:/media/docker-scripts"
