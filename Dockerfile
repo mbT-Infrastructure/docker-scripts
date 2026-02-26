@@ -1,5 +1,5 @@
-FROM madebytimo/nodejs
+FROM madebytimo/base
 
 RUN install-autonomous.sh install Basics MetadataEditors \
-    Scripts ScriptsAdvanced ScriptsDevelopment ScriptsHelper && \
-    rm -rf /var/lib/apt/lists/*
+    Scripts ScriptsAdvanced ScriptsDevelopment ScriptsHelper \
+    && rm -rf /var/lib/apt/lists/*

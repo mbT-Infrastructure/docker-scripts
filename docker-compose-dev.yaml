@@ -1,9 +1,9 @@
-version: "3.8"
-
 services:
 
-    docker-scripts:
-        container_name: docker-scripts
+    scripts:
+        container_name: scripts
         build: .
-        volumes:
-            - "./data-local:/media/docker-scripts"
+        mem_limit: 2G
+        command: download.sh --output -
+            "https://raw.githubusercontent.com/mbT-Infrastructure/docker-scripts/refs/heads/main/Readme.md"
+        read_only: true
